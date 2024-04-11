@@ -14,16 +14,15 @@ This README provides detailed instructions for setting up infrastructure for Jen
    - Launched a t2.large EC2 instance with Ubuntu OS.
    - Allocated 30 GiB of EBS volume.
    - Used a security group allowing ports: 22, 25, 80, 443, 6443, 465, 3000-10000, 30000-32767.
-   ![Security Group ports](screenshots/security-group-ports.png)
+   ![Security Group ports](Screenshots/security-group-ports.png)
 
-   ![Jenkins EC2 Instance](screenshots/Jenkins-instance.png)
-
+   ![Jenkins EC2 Instance](Screenshots/Jenkins-instance.png)
 2. **SonarQube Instance**:
    - Launched a t2.medium EC2 instance with Ubuntu OS.
    - Allocated 20 GiB of EBS volume.
    - Used the same security group as Jenkins.
 
-   ![SonarQube EC2 Instance](screenshots/sonarqube-setup.png)
+   ![SonarQube EC2 Instance](Screenshots/sonarqube-setup.png)
 
 
 3. **Nexus Instance**:
@@ -88,20 +87,20 @@ sudo apt-get update
 
 sudo apt-get install trivy
 ```
-![Jenkins Server](screenshots/jenkins-server-login.png)
+![Jenkins Server](Screenshots/jenkins-server-login.png)
 
 
-![Jenkins Plugins](screenshots/install-plugins.png)
+![Jenkins Plugins](Screenshots/install-plugins.png)
 
-![Jenkins tools configuration](screenshots/configure-jdk17.png)
+![Jenkins tools configuration](Screenshots/configure-jdk17.png)
 
-![Jenkins tools configuration](screenshots/configure-docker.png)
+![Jenkins tools configuration](Screenshots/configure-docker.png)
 
-![Jenkins tools configuration](screenshots/configure-maven.png)
+![Jenkins tools configuration](Screenshots/configure-maven.png)
 
 
 
-![Jenkins Required Credentials](screenshots/credentials.png)
+![Jenkins Required Credentials](Screenshots/credentials.png)
 
 **SonarQube Instance:**
 ```bash
@@ -114,9 +113,9 @@ ssh -i <keypair.pem> ubuntu@<sonarqube-instance-public-ip>
 # Run SonarQube Container
 docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
 ```
-![SonarQube server](screenshots/sonar-docker-image.png)
+![SonarQube server](Screenshots/sonar-docker-image.png)
 
-![SonarQube Webhook for Jenkins](screenshots/sonarqube-webhook.png)
+![SonarQube Webhook for Jenkins](Screenshots/sonarqube-webhook.png)
 
 
 
@@ -397,7 +396,7 @@ pipeline {
 
 
 
-![Instances Termination ](screenshots/termination-of-instances.png)
+![Instances Termination ](Screenshots/termination-of-instances.png)
 
 
 ---
